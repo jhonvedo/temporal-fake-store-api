@@ -12,6 +12,7 @@
     "prisma:migrate": "prisma migrate dev --name initial",
     "prisma:seed": "prisma db seed --preview-feature",
     "prisma:studio": "prisma studio",
+    "postinstall": "npx prisma generate",
     "test": "jest"
   },
   "prisma": {

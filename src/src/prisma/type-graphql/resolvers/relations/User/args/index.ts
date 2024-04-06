@@ -1,1 +1,0 @@
-export { UserProductsArgs } from "./UserProductsArgs";
