@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",  
   "scripts": {    
-    "build": "tsc",
+    "build": "tsc && npm run prisma:generate && npm run seed",   
     "dev": "nodemon src/server.ts",
     "start": "ts-node  src/server.ts",
     "seed": "npx prisma db seed",
