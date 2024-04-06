@@ -4,9 +4,10 @@
   "description": "",
   "main": "index.js",  
   "scripts": {    
-    "build": "tsc && npm run prisma:generate && npm run seed",   
+    "build": "tsc",   
     "dev": "nodemon src/server.ts",
     "start": "ts-node  src/server.ts",
+    "deploy": "npx prisma migrate deploy",
     "seed": "npx prisma db seed",
     "prisma:generate": "prisma generate",
     "prisma:migrate": "prisma migrate dev --name initial",
