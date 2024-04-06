@@ -3,8 +3,10 @@ import { PrismaClient } from '@prisma/client';
 const prisma = new PrismaClient();
 
 async function main() {
+    console.log("checking seed...")
     let admin = await prisma.user.findUnique({ where: { email: "admin@admin.com" } });
-    if ("admin") {
+    if (!admin) {
+        console.log("creating admin user...")
         await prisma.user.createMany({
             data: [
                 { email: 'admin@admin.com', password: 'admin', name: "Admin" }
