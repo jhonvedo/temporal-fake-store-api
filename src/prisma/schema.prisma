@@ -1,20 +1,11 @@
 datasource db {
-  provider = "sqlite"
-  url      = "file:./dev.db"
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
 }
 
 generator client {
-  provider  = "prisma-client-js"
-  //output    = "./sqlite-prisma-client-js"
+  provider  = "prisma-client-js"  
 }
-// generator typegraphql {
-//   provider = "typegraphql-prisma"
-//   output   = "./generated/type-graphql"
-//   emitIdAsIDType = true
-//   useSimpleInputs = true
-//   emitTranspiledCode = true
-//   formatGeneratedCode = "prettier"
-// }
 
 model Product {
   id        Int       @id @default(autoincrement())

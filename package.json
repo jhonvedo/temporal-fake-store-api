@@ -2,9 +2,9 @@
   "name": "temporal-fake-store-api",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",  
-  "scripts": {    
-    "build": "tsc",   
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
     "dev": "nodemon src/server.ts",
     "start": "ts-node  src/server.ts",
     "deploy": "npx prisma migrate deploy",
