@@ -2,11 +2,7 @@
   "name": "temporal-fake-store-api",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
-  "engines": {
-    "node": ">=20.0.0",
-    "npm": ">=10.0.0"
-  },
+  "main": "index.js",  
   "scripts": {
     "dev": "nodemon --exec ts-node-dev --transpile-only --no-notify src/server.ts",
     "build": "tsc",
