@@ -3,11 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",  
-  "scripts": {
-    "dev": "nodemon --exec ts-node-dev --transpile-only --no-notify src/server.ts",
+  "scripts": {    
     "build": "tsc",
+    "start": "nodemon src/server.ts",
     "seed": "npx prisma db seed",
-    "start": "node dist/server.js",
     "prisma:generate": "prisma generate",
     "prisma:migrate": "prisma migrate dev --name initial",
     "prisma:seed": "prisma db seed --preview-feature",
