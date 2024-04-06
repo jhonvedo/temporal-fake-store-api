@@ -1,7 +1,6 @@
 import { Product } from '../models/product';
 import prisma from '../db/db';
 import { CustomRequest } from '../auth/customRequest';
-//import { ProductWhereUniqueInput } from '../prisma/generated/type-graphql/resolvers/inputs/ProductWhereUniqueInput';
 
 const resolvers = {
   Query: {
