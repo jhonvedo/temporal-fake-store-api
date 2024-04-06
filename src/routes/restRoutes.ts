@@ -25,6 +25,11 @@ router.get('/products', async (req: Request, res: Response) => {
   res.json(products);
 });
 
+router.get('/products/:id', async (req: Request, res: Response) => {
+  const { id } = req.params;
+  const products = await prisma.product.findUnique({where: {id: parseInt(id)}});
+  res.json(products);
+});
 
 router.post('/products', async (req: Request, res: Response) => {
   const { name, price } = req.body;
@@ -39,7 +44,7 @@ router.put('/products/:id', async (req: Request, res: Response) => {
   const { id } = req.params;
   const { name, price } = req.body;
   const updatedProduct = await prisma.product.update({
-    where: { id: parseInt(id, 10) },
+    where: { id: parseInt(id) },
     data: { name, price },
   });
   res.json(updatedProduct);

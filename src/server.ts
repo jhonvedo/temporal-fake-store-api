@@ -20,9 +20,10 @@ const schema = makeExecutableSchema({
 
 
 app.use(express.json());
-
+app.get('/', (req, res) => {    
+    res.json({ status: "Active" });
+  });
 app.use('/api', restRoutes);
-
 app.use('/graphql', authMiddleware);
 app.use(
     '/graphql',
